@@ -1,0 +1,226 @@
+.tg {
+    display: flex;
+    max-width: 900px;
+    min-width: 400px;
+    max-height: 90vh;
+    margin: 50px auto 0;
+    background-color: #17212b;
+
+    &__left {
+        color: blue;
+    }
+
+    &__right {
+        width: 520px;
+        background-color: #0e1621;
+
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 13px 25px 10px 20px;
+            background-color: #17212b;
+
+            border: {
+                left: 1px solid #000000;
+                bottom: 1px solid rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        &__heading {
+            margin: 0;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        &__text {
+            margin: 0;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .icon {
+            margin-right: 25px;
+
+            &--wrapper {
+                display: flex;
+                align-items: center;
+                color: rgba(255, 255, 255, 0.3);
+                font-size: 16px;
+                font-weight: normal;
+            }
+        }
+
+
+    }
+
+    .nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px;
+        background-color: #1b2734;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+        .btn--wrapper {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        &__btn {
+            display: inline-block;
+            width: 20px;
+            border: none;
+            background-color: #284e6c;
+        }
+
+        &__btn:active {
+            background-color: #429bdb;
+        }
+
+        &__btn--active {
+            background-color: #429bdb;
+        }
+
+        .wrapp {
+            margin-left: 15px;
+        }
+
+        &__heading {
+            margin: 0;
+            margin-bottom: 4px;
+            font-weight: 500;
+            font-size: 15px;
+            color: rgba(81, 179, 243, 1);
+        }
+
+        &__text {
+            margin: 0;
+            font-size: 13px;
+            color: #ffffff;
+        }
+
+        &__icons {
+            color: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    .chat {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 420px;
+        padding: 20px;
+
+        .chats {
+            position: relative;
+            max-width: 600px;
+            min-width: 30px;
+            margin-bottom: 3px;
+            display: flex;
+        }
+
+        &__left {
+            align-self: flex-start;
+            @include super(#182533, #ffffff, 16px, 500, 12px, 11px);
+
+        }
+
+        &__left::before {
+            @include before;
+            left: -11px;
+        }
+
+        &__right {
+            align-self: flex-end;
+            text-align: right;
+            @include super(#182533, #ffffff, 16px, 500, 12px, 11px);
+
+        }
+
+        &__right::after {
+            @include before;
+            right: -11px;
+        }
+
+        &__span {
+            align-self: flex-end;
+            margin-left: 11px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    &__bottom {
+        background-color: #17212b;
+        padding: 3px 15px;
+        border-top: 1px solid rgba(0, 0, 0, 0.4);
+    }
+
+    &__form {
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+
+        &__btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+        }
+    }
+
+    &__input {
+        background-color: transparent;
+        width: 570px;
+
+        padding: {
+            top: 15px;
+            bottom: 15px;
+            left: 15px;
+        }
+
+        border: none;
+
+        &:focus {
+            color: #ffffff;
+        }
+    }
+
+    .bottom-wrapp {
+        display: flex;
+        align-items: center;
+    }
+
+    .chat__btn {
+        background-color: transparent;
+        border: none;
+    }
+
+    .form__icon {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .fa-smile {
+        margin-right: 5px;
+    }
+
+    .icons {
+        font-size: 23px;
+    }
+
+    .aicons {
+        transition: all 340ms linear;
+
+        &:hover {
+            color: #ffffff;
+            cursor: pointer;
+        }
+    }
+
+}
